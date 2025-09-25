@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>VOLCANOCRAFT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background: url('img/rrr.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color:red;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+        }
+
+        header img {
+            width:100%;
+            max-height:300px;
+            object-fit:cover;
+            display: block;
+        }
+
+        header h1 {
+            font-size:6em;
+            font-weight:900;
+            color:orange;
+            -webkit-text-stroke: 2px red;
+            text-shadow:-2px -2px 0 red,2px -2px 0 red,-2px 2px 0 red,5px 5px 0 red;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin:0;
+        }
+
+        header p {
+            color:red;
+            font-size:1.5em;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            margin:0;
+        }
+
+        .frame {
+            background: rgba(255,255,255,0.9);
+            border-radius: 50px;
+            padding: 40px;
+            overflow: auto;
+            color: red;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .frame-left {
+            width: 850px;
+            height: 500px;
+            border: 8px solid red;
+            margin-top: 20px;
+            left: 30px;
+        }
+
+        .frame-news {
+            width: 750px;
+            height: 250px;
+            border-radius: 25px;
+            padding: 30px;
+            border: 8px solid red;
+            left: 30px;
+        }
+
+        .frame-button {
+            position: relative;
+            width: 700px;
+            height: 220px;
+            border-radius: 30px;
+            padding: 30px;
+            background: rgba(255,255,255,0.9);
+            color: red;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 30px;
+            left: 0px;
+        }
+
+        .frame-button:hover {
+            background: rgba(255,255,255,1);
+            cursor: pointer;
+        }
+
+        .content h2, .content p {
+            margin: 1px 0;
+        }
+
+        .frame-right-top {
+            position: absolute;
+            top: 335px;
+            left: 1100px;
+            right: 30px;
+            width: 750px;
+            height: 450px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50px;
+            padding: 10px;
+            border: 8px solid red;
+            box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.7);
+        }
+
+        .frame-right-bottom {
+            position: absolute;
+            top: 900px;
+            left: 1100px;
+            right: 30px;
+            width: 750px;
+            height: 690px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50px;
+            padding: 10px;
+            border: 8px solid red;
+            box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.7);
+        }
+
+        /* Секция открыток */
+        .postcards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px;
+            justify-content: center;
+        }
+
+        .postcard {
+            background: rgba(255,255,255,0.95);
+            border: 6px solid red;
+            border-radius: 30px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .postcard img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .postcard h3 {
+            margin: 10px;
+            color: orange;
+            -webkit-text-stroke: 1px red;
+        }
+
+        .postcard p {
+            margin: 10px;
+            color: red;
+        }
+
+        .postcard:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="img/ttt.jpg" alt="VOLCANOCRAFT">
+    <h1>VOLCANOCRAFT</h1>
+    <p>Ласкаво просимо на сервер!</p>
+</header>
+
+<div class="frame frame-left">
+    <div class="content">
+        <h2>Описання сервера</h2>
+        <p>Це ліва рамка. Тут можна писати детальний опис сервера, правила гри або цікаві факти.</p>
+    </div>
+</div>
+
+<div class="frame frame-news">
+    <div class="content">
+        <h2>Новини сервера</h2>
+        <p>Тут можна писати останні новини, івенти або оновлення сервера.</p>
+    </div>
+</div>
+
+<a href="site.html" target="_blank" class="frame-button">
+    <div class="content">
+        <h2>Правила сервера</h2>
+        <p>Натисни сюди, щоб відкрити сторінку з правилами або додатковим контентом.</p>
+    </div>
+</a>
+
+<div class="frame frame-right-top">
+    <div class="content">
+        <img src="img/photo1.jpg" alt="Фото 1" style="width:100%; height:auto; border-radius: 50px;">
+    </div>
+</div>
+
+<div class="frame frame-right-bottom">
+    <div class="content">
+        <img src="img/photo2.jpg" alt="Фото 2" style="width:100%; height:auto; border-radius: 50px;">
+    </div>
+</div>
+
+<!-- Секция открыток -->
+<section class="postcards">
+    <div class="postcard">
+        <img src="img/card1.jpg" alt="Открытка 1">
+        <h3>Привіт з VolcanoCraft!</h3>
+        <p>Бажаємо приємної гри та нових пригод.</p>
+    </div>
+
+    <div class="postcard">
+        <img src="img/card2.jpg" alt="Открытка 2">
+        <h3>Подія тижня</h3>
+        <p>Не пропусти новий івент на сервері!</p>
+    </div>
+
+    <div class="postcard">
+        <img src="img/card3.jpg" alt="Открытка 3">
+        <h3>Запрошення друзів</h3>
+        <p>Клич своїх друзів і отримаєш бонуси.</p>
+    </div>
+</section>
+
+</body>
+</html>
