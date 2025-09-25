@@ -1,57 +1,205 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>VOLCANOCRAFT</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin:0; padding:0; background: url('rrr.jpg') no-repeat fixed; background-size: cover; color:#344;">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background: url('rrr.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color:red;
+        }
 
-<!-- 🔥 Верх с картинкой -->
-<header style="text-align:center;">
-    <img src="ttt.jpg" alt="VOLCANOCRAFT" style="width:100%; max-height:300px; object-fit:cover;">
-    <h1 style="font-size:6em;
-        font-weight:900;
-        color:orange;
-        -webkit-text-stroke: 2px red;
-        text-shadow:-2px -2px 0 red, 2px -2px 0 red, -2px 2px 0 red, 5px 5px 0 red;
-        margin-top:-270px;"> <!-- сдвигает текст поверх картинки -->
-        VOLCANOCRAFT
-    </h1>
-    <p style="color:white; font-size:1.5em; margin-top:10px;">Ласкаво просимо на сервер!</p>
+        header {
+            position: relative;
+            text-align: center;
+        }
+
+        header img {
+            width:100%;
+            max-height:300px;
+            object-fit:cover;
+            display: block;
+        }
+
+        header h1 {
+            font-size:6em;
+            font-weight:900;
+            color:orange;
+            -webkit-text-stroke: 2px red;
+            text-shadow:-2px -2px 0 red,2px -2px 0 red,-2px 2px 0 red,5px 5px 0 red;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin:0;
+        }
+
+        header p {
+            color:red;
+            font-size:1.5em;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            margin:0;
+        }
+
+        /* Загальні стилі для рамок */
+        .frame {
+            background: rgba(254, 195, 12,0.9);
+            border-radius: 50px;
+            padding: 40px;
+            overflow: auto;
+            color: red;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* Ліва рамка */
+        .frame-left {
+            width: 850px;
+            height: 500px;
+            border: 8px solid red;
+            margin-top: 20px;
+            left: 30px;
+        }
+
+        /* Рамка новин */
+        .frame-news {
+            width: 750px;
+            height: 250px;
+            border-radius: 25px;
+            padding: 30px;
+            border: 8px solid red;
+            left: 30px;
+        }
+
+        /* Нажимна кнопка */
+        .frame-button {
+            width: 450px;
+            height: 150px;
+            border-radius: 30px;
+            padding: 30px;
+            background: rgba(254, 195, 12,0.9);
+            color: red;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 30px;
+            position: relative;
+            left: 30px; /* відсунута вправо */
+        }
+
+        .frame-button:hover {
+            background: rgba(255, 134, 1,1);
+            cursor: pointer;
+        }
+
+        .content h2, .content p {
+            margin: 1px 0;
+        }
+
+        /* Верхня рамка справа */
+        .frame-right-top {
+            position: absolute;
+            top: 335px;
+            left: 1100px;
+            right: 30px;
+            width: 750px;
+            height: 450px;
+            background: rgba(254, 195, 12, 10.9);
+            border-radius: 50px;
+            padding: 10px;
+            border: 8px solid red;
+        }
+
+        /* Нижня рамка справа */
+        .frame-right-bottom {
+            position: absolute;
+            top: 900px;
+            left: 1100px;
+            right: 30px;
+            width: 750px;
+            height: 590px;
+            background: rgba(254, 195, 12,0.9);
+            border-radius: 50px;
+            padding: 10px;
+            border: 8px solid red;
+        }
+
+        /* НОВА рамка */
+        .frame-extra {
+            position: absolute;
+            top: 1550px;   /* регулюй вверх/вниз */
+            left: 30px;    /* регулюй вліво/вправо */
+            width: 800px;  /* ширина */
+            height: 300px; /* висота */
+            background: rgba(254, 195, 12,0.9);
+            border-radius: 50px;
+            padding: 20px;
+            border: 8px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="ttt.jpg" alt="VOLCANOCRAFT">
+    <h1>VOLCANOCRAFT</h1>
+    <p>Добро пожаловать на сайт сервера!</p>
 </header>
 
-<main style="max-width:1000px;
-    margin:-120px auto;
-    padding:100px;
-    background:rgba(255, 255, 255,0.9);
-    border-radius:50px;
-    box-shadow:0 5px 30px rgba(255, 0, 0 , 5);
-    min-height:1200px;">
+<!-- 1. Опис сервера -->
+<div class="frame frame-left">
+    <div class="content">
+        <h2>Описання сервера</h2>
+        <p>Це ліва рамка. Тут можна писати детальний опис сервера, правила гри або цікаві факти.</p>
+    </div>
+</div>
 
-    <h2 style="margin-top:50px; color:#ff0000;">Що таке VOLCANOCRAFT?</h2>
-    <p style="line-height:1.6;">
-        VOLCANOCRAFT — це унікальний Minecraft-сервер, де тебе чекають пригоди, квести та дружня спільнота.
-        Тут ти зможеш побудувати власну базу, змагатися з іншими гравцями або досліджувати світ разом з друзями.
-    </p>
+<!-- 2. Новини -->
+<div class="frame frame-news">
+    <div class="content">
+        <h2>Новини сервера</h2>
+        <p>Тут можна писати останні новини, івенти або оновлення сервера.</p>
+    </div>
+</div>
 
-    <h2 style="margin-top:20px; color:#ff0000;">Особливості сервера</h2>
-    <ul>
-        <li>🔥 Унікальний світ із вулканами та секретними локаціями.</li>
-        <li>⚔️ PvP та PvE режими для любителів боїв і виживання.</li>
-        <li>🎁 Щотижневі івенти та подарунки для активних гравців.</li>
-        <li>💬 Дружня команда та підтримка 24/7.</li>
-    </ul>
+<!-- 3. Нажимна кнопка -->
+<a href="site.html" target="_blank" class="frame-button">
+    <div class="content">
+        <h2>Правила сервера</h2>
+        <p>Натисни сюди, щоб відкрити сторінку з правилами або додатковим контентом.</p>
+    </div>
+</a>
 
-    <h2 style="margin-top:20px; color:#ff0000;">Як приєднатися?</h2>
-    <p style="line-height:1.6;">
-        1. Запусти Minecraft (версія 1.20+)<br>
-        2. Перейди в меню <b>Multiplayer</b><br>
-        3. Додай сервер: <b>play.volcanocraft.com</b><br>
-        4. Приєднуйся та насолоджуйся грою!
-    </p>
-</main>
+<!-- 4. Верхня рамка справа -->
+<div class="frame frame-right-top">
+    <div class="content">
+        <img src="photo1.jpg" alt="Фото 1" style="width:100%; height:auto; border-radius: 50px;">
+    </div>
+</div>
 
+<!-- 5. Нижня рамка справа -->
+<div class="frame frame-right-bottom">
+    <div class="content">
+        <img src="photo2.jpg" alt="Фото 2" style="width:100%; height:auto; border-radius: 50px;">
+    </div>
+</div>
 
+<!-- 6. НОВА рамка -->
+<div class="frame frame-extra">
+    <div class="content">
+        <h2>Додаткова інформація</h2>
+        <p>Це нова рамка. Тут можна розмістити будь-який текст або інформацію, і вона НЕ є кнопкою.</p>
+    </div>
+</div>
 
 </body>
 </html>
+
+
